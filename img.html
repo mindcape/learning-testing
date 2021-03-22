@@ -2,10 +2,38 @@
 <html>
 <head>
    
-    <title>Document</title>
+    <title>img</title>
+
+    <script>
+        function showDate(){
+            // all of this is unesssary but my dad made me do it 
+            var d = new Date();
+            document.getElementById('datetime').innerHTML = d.toLocaleDateString();
+            var name = "Dheeran";
+
+            var d2 = new Date();
+            d2.setMonth(5);
+            d2.setDate(21);
+            d2.setFullYear(2009);
+
+            var yearD = d.getFullYear() - d2.getFullYear();
+            var monthD = d.getMonth() - d2.getMonth();
+            var daysD = d.getDate() - d2.getDate();
+
+            document.getElementById('myage').innerHTML = monthD + "/" + daysD + "/" + yearD
+        }
+    </script>
 </head>
 <body>
     <a href="frild.jpeg"> <img src="frild.jpeg" alt="frild"> </a>
+    <p> this is a test page for a image <br> 
+    I have created a image that if you  click on it it will <br>
+    go into to a tab that will only show the picture <br>
+    and it is a frield <sup> tm </sup></p>
     
+    <p>DateTime: <span id="datetime"></span></p>
+    <p>My age: <span id="myage"></span> </p>
+    <p><a href="#" onclick="showDate()">click me to show date and time</a></p>
+    <p> the link to the net page <a href="head-and-layout.html">head and layout</a></p>
 </body>
 </html>
